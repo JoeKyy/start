@@ -1,0 +1,6 @@
+label {
+    @include font(bold);
+
+    color: color(primary, lighter);
+    text-transform: capitalize;
+}

@@ -1,0 +1,11 @@
+input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: space(p) 0;
+    padding: space(base);
+
+    background-color: color(light, lighten);
+    border-radius: 8px;
+    border: 0;
+}

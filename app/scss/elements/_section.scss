@@ -1,0 +1,321 @@
+section {
+    &.highlight {
+        position: relative;
+        overflow: hidden;
+
+        margin: (- space(p)) 0;
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        figure {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            figcaption {
+                @include responsive(large) {
+                    left: -350px;
+
+                    width: 30%;
+                    margin: auto;
+                }
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                margin: auto auto 0;
+
+                width: 70%;
+                height: 350px;
+
+                h2 {
+                    @include font(bold);
+                    @include responsive(large) {
+                        font-size: font-size(xbig);
+                    }
+                    
+                    font-size: font-size(big);
+                    line-height: 1;
+                    color: color(light);
+
+                    + p {
+                        @include font(base);
+                        @include responsive(large) {
+                            font-size: (font-size(medium) * 1.3);
+                        }
+
+                        margin: space(gg) 0;
+
+                        font-size: font-size(medium);
+                        line-height: 1.5;
+                        color: color(light);
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    &.numbers,
+    &.live,
+    &.news {
+        position: relative;
+
+        min-height: 400px;
+        padding: space(m) 0 space(xg);
+
+        background: color(light, lighter);
+
+        &:before {
+            @include generated-content(100%, 250px);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background: color(primary, darker);
+            background: linear-gradient(90deg, color(primary, darker) 0%, color(primary, lighter) 100%);
+        }
+
+        h3 {
+            margin: space(g) 0 space(p);
+
+            color: color(light);
+
+            + p {
+                margin: space(m) 0 space(xg);
+    
+                font-size: font-size(medium);
+                color: color(primary, lighten);
+            }
+        }
+    }
+
+    &.numbers {
+        img {
+            border-radius: 8px;
+        }
+
+        .numbers--highlight {
+            position: relative;
+            z-index: 1;
+
+            padding: space(g);
+
+            background-color: color(light, lighten);
+            border-radius: 8px;
+            box-shadow: -19px 20px 20px 9px #0000002b;
+
+            p {
+                @include font(black);
+                @include responsive(large) {
+                    font-size: font-size(xbig);
+                }
+
+                font-size: font-size(big);
+                color: color(primary);
+
+                strong {
+                    @include responsive(large) {
+                        font-size: (font-size(medium) * 1.2);
+                        margin: 0 0 0 (space(xg) * 2.5);
+                    }
+
+                    display: block;
+                    margin: 0 0 0 (space(gg));
+
+                    font-size: (font-size(normal));
+                    line-height: 1;
+                }
+            }
+        }
+
+        
+        ul {
+            @include responsive(large) {
+                margin: (space(xg) * 2) 0 0;
+            }
+
+            margin: space(xg) 0 0;
+
+            li {
+                @include font(black);
+                @include responsive(large) {
+                    font-size: font-size(big);
+                }
+
+                position: relative;
+
+                margin: space(xg) 0 space(xg) space(g);
+                padding: 0 0 0 (space(xg) * 1.5);
+
+                font-size: font-size(large);
+                color: color(primary);
+
+                &:nth-child(1) {
+                    &:before {
+                        @include sprite($icn-01);
+    
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+    
+                        margin: auto auto auto -10px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &:before {
+                        @include sprite($icn-02);
+    
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+    
+                        margin: auto auto auto -10px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &:before {
+                        @include sprite($icn-03);
+    
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+    
+                        margin: auto auto auto -35px;
+                    }
+                }
+
+                &:nth-child(4) {
+                    &:before {
+                        @include sprite($icn-04);
+    
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+    
+                        margin: auto auto auto -20px;
+                    }
+                }
+
+                &:nth-child(5) {
+                    &:before {
+                        @include sprite($icn-05);
+    
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+    
+                        margin: auto auto auto -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.live {
+        padding: space(m)  0 space(xg) * 3;
+
+        .live--content {
+            position: relative;
+
+            border-radius: 8px;
+
+            &:before {
+                @include generated-content(90%, 100%);
+                
+                position: absolute;
+                top: space(xg) * 1.5;
+                left: space(xg) * 1.5;
+
+                border: 2px solid color(primary, darken);
+                border-radius: 8px;
+            }
+            &:after {
+                @include generated-content(90%, 100%);
+                
+                position: absolute;
+                top: space(g);
+                right: space(xg) * 2.5;
+
+                border: 2px solid color(primary, lighter);
+                border-radius: 8px;
+            }
+
+            img {
+                position: relative;
+                z-index: 2;
+
+                border-radius: 8px;
+            }
+        }
+    }
+
+    &.news {
+        .news--content {
+            margin: 0 0 space(g);
+            img {
+                width: 100%;
+                margin: 0 0 (- space(base));
+
+                border-radius: 8px;
+            }
+
+            div {
+                padding: space(g);
+
+                background-color: color(light);
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    }
+
+    &.updates {
+        margin: 0 0 (- space(xg) * 2);
+        padding: space(xg) 0 0;
+
+        background: color(primary, darker);
+        background: linear-gradient(90deg, color(primary, darker) 0%, color(primary, lighter) 100%);
+
+        h3 {
+            @include responsive(large) {
+                font-size: font-size(xbig);
+            }
+            font-size: (font-size(big) * 1.5);
+            color: color(light);
+        }
+
+        p {
+            margin: space(g) 0 0;
+
+            font-size: font-size(medium);
+            color: color(primary, lighten);
+        }
+
+        form { 
+            padding: space(xg) space(xg) space(gg);
+
+            background-color: color(light);
+            border-radius: 8px;
+        }
+    }
+}

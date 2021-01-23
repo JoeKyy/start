@@ -1,0 +1,89 @@
+/* Variables */
+@charset 'UTF-8';
+
+/// @group    Configurações
+
+$colors: (
+  primary: (
+    darken: #05306B,
+    darker: #0063B0,
+    base: #0061AE,
+    lighter: #0098D6,
+    lighten: #74D7FF,
+  ),
+  secondary: (
+    base: #F8B904,
+  ),
+  light: (
+    base: #ffffff,
+    lighten: #DEE9EE,
+    lighter: #EFF3F5,
+  ),
+  dark: (
+    base: #000000,
+  ),
+  danger      : #f85757,
+  success     : #00b412,
+  warning     : #fed82b,
+
+) !default;
+
+/// @group    Fontes
+
+$font-config: (
+  thin: (
+    name: 'Open Sans',
+    weight: 100
+  ),
+  light: (
+    name: 'Open Sans',
+    weight: 300
+  ),
+  base: (
+    name: 'Open Sans',
+    weight: 400
+  ),
+  bold: (
+    name: 'Open Sans',
+    weight: 700
+  ),
+  black: (
+    name: 'Open Sans',
+    weight: 900
+  )
+) !default;
+
+$font-fallback: Tahoma, Verdana, Segoe, sans-serif !default;
+
+/// @group    Fontes
+$font-sizes: (
+  xxxbig		:	  96px,
+  xxbig		  :	  94px,
+  xbig		  :	  72px,
+  big		    :	  32px,
+  large		  :	  24px,
+  medium		:	  16px,
+  normal		:	  14px,
+  small		  :	  12px,
+) !default;
+
+/// @group    Breakpoints
+$breakpoints: (
+  xsmall  : 375px,
+  small   : 641px,
+  medium  : 769px,
+  large   : 1200px,
+  xlarge  : 1321px,
+  xxlarge : 1921px
+) !default;
+
+/// @group Spaces
+$spaces: (
+  s       :     4px,
+  p       :     8px,
+  base    :     16px,
+  m       :     24px,
+  g       :     32px,
+  gg      :     48px,
+  xg      :     56px
+) !default;

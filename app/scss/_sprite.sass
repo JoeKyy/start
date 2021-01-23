@@ -1,0 +1,92 @@
+$icn-01-x: 135px
+$icn-01-y: 0px
+$icn-01-offset-x: -135px
+$icn-01-offset-y: 0px
+$icn-01-width: 71px
+$icn-01-height: 71px
+$icn-01-total-width: 281px
+$icn-01-total-height: 192px
+$icn-01-image: '../images/sprite.png'
+$icn-01: 135px 0px -135px 0px 71px 71px 281px 192px '../images/sprite.png'
+$icn-02-x: 206px
+$icn-02-y: 60px
+$icn-02-offset-x: -206px
+$icn-02-offset-y: -60px
+$icn-02-width: 73px
+$icn-02-height: 60px
+$icn-02-total-width: 281px
+$icn-02-total-height: 192px
+$icn-02-image: '../images/sprite.png'
+$icn-02: 206px 60px -206px -60px 73px 60px 281px 192px '../images/sprite.png'
+$icn-03-x: 0px
+$icn-03-y: 73px
+$icn-03-offset-x: 0px
+$icn-03-offset-y: -73px
+$icn-03-width: 96px
+$icn-03-height: 82px
+$icn-03-total-width: 281px
+$icn-03-total-height: 192px
+$icn-03-image: '../images/sprite.png'
+$icn-03: 0px 73px 0px -73px 96px 82px 281px 192px '../images/sprite.png'
+$icn-04-x: 0px
+$icn-04-y: 155px
+$icn-04-offset-x: 0px
+$icn-04-offset-y: -155px
+$icn-04-width: 86px
+$icn-04-height: 37px
+$icn-04-total-width: 281px
+$icn-04-total-height: 192px
+$icn-04-image: '../images/sprite.png'
+$icn-04: 0px 155px 0px -155px 86px 37px 281px 192px '../images/sprite.png'
+$icn-05-x: 206px
+$icn-05-y: 0px
+$icn-05-offset-x: -206px
+$icn-05-offset-y: 0px
+$icn-05-width: 75px
+$icn-05-height: 60px
+$icn-05-total-width: 281px
+$icn-05-total-height: 192px
+$icn-05-image: '../images/sprite.png'
+$icn-05: 206px 0px -206px 0px 75px 60px 281px 192px '../images/sprite.png'
+$icn-play-x: 135px
+$icn-play-y: 71px
+$icn-play-offset-x: -135px
+$icn-play-offset-y: -71px
+$icn-play-width: 45px
+$icn-play-height: 45px
+$icn-play-total-width: 281px
+$icn-play-total-height: 192px
+$icn-play-image: '../images/sprite.png'
+$icn-play: 135px 71px -135px -71px 45px 45px 281px 192px '../images/sprite.png'
+$logo-x: 0px
+$logo-y: 0px
+$logo-offset-x: 0px
+$logo-offset-y: 0px
+$logo-width: 135px
+$logo-height: 73px
+$logo-total-width: 281px
+$logo-total-height: 192px
+$logo-image: '../images/sprite.png'
+$logo: 0px 0px 0px 0px 135px 73px 281px 192px '../images/sprite.png'
+
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  background-image: url(nth($sprite, 9))
+
+@mixin sprite($sprite)
+  display: block;
+  content: "";
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)

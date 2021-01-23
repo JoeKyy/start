@@ -1,0 +1,69 @@
+a,
+[type="submit"],
+button{
+	&.btn {
+		@include font(bold);
+		
+		height: 50px;
+		padding: space(p) space(g);
+		
+		border-radius: 8px;
+		
+		&.btn-primary {
+			color: color(light);
+
+			background-color: color(primary);
+			border: 3px solid transparent;
+
+			&:hover {
+				color: color(primary);
+
+				background-color: transparent;
+				border: 3px solid color(primary);
+			}
+
+			&.btn-border {
+				color: color(primary);
+
+				background-color: transparent;
+				border: 3px solid color(primary);
+
+				&:hover {
+					color: color(light);
+
+					background-color: color(primary);
+					border: 3px solid transparent;
+				}
+			}
+		}
+		
+		&.btn-secondary {
+			color: color(primary, darken);
+
+			background-color: color(secondary);
+			border: 3px solid transparent;
+
+			&.btn-border {
+				color: color(secondary);
+
+				background-color: transparent;
+				border: 3px solid color(secondary);
+
+				&:hover {
+					color: color(primary, darken);
+
+					background-color: color(secondary);
+					border: 3px solid transparent;
+				}
+			}
+
+			&:hover {
+				color: color(secondary);
+
+				background-color: transparent;
+				border: 3px solid color(secondary);
+			}
+		}
+
+	}
+}

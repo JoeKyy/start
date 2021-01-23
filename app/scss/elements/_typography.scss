@@ -1,0 +1,59 @@
+h1 {}
+
+h2 {
+    @include font(black);
+}
+
+h3 {
+    @include font(black);
+
+    font-size: font-size(big);
+}
+
+h4 {
+    @include font(black);
+
+    font-size: font-size(large);
+}
+
+h5 {
+    @include font(black);
+
+    font-size: font-size(medium);
+}
+
+h6 {
+    @include font(black);
+
+    font-size: font-size(normal);
+}
+
+p {
+    @include font(black);
+
+    font-size: font-size(normal);
+    color: color(primary);
+}
+
+hr {}
+
+ul {
+    li {}
+}
+
+a {
+   color: inherit;
+
+   &:hover {
+        color: inherit;
+        text-decoration: underline;
+   }
+}
+
+em {
+    font-style: italic
+}
+
+strong {
+    @include font(black);
+}

@@ -1,39 +1,16 @@
 h1 {}
 
-h2 {
-    @include font(black);
-}
+h2 {}
 
-h3 {
-    @include font(black);
+h3 {}
 
-    font-size: font-size(big);
-}
+h4 {}
 
-h4 {
-    @include font(black);
+h5 {}
 
-    font-size: font-size(large);
-}
+h6 {}
 
-h5 {
-    @include font(black);
-
-    font-size: font-size(medium);
-}
-
-h6 {
-    @include font(black);
-
-    font-size: font-size(normal);
-}
-
-p {
-    @include font(black);
-
-    font-size: font-size(normal);
-    color: color(primary);
-}
+p {}
 
 hr {}
 

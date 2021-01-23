@@ -5,22 +5,21 @@
 
 $colors: (
   primary: (
-    darken: #05306B,
-    darker: #0063B0,
-    base: #0061AE,
+    darker: #2ca1df,
+    base: #046198,
     lighter: #0098D6,
-    lighten: #74D7FF,
   ),
   secondary: (
-    base: #F8B904,
+    base: #ed731f,
   ),
+  tertiary: (
+    base: #a3ca5a,
+  )
   light: (
     base: #ffffff,
-    lighten: #DEE9EE,
-    lighter: #EFF3F5,
   ),
   dark: (
-    base: #000000,
+    base: #1a3240,
   ),
   danger      : #f85757,
   success     : #00b412,
@@ -32,23 +31,23 @@ $colors: (
 
 $font-config: (
   thin: (
-    name: 'Open Sans',
+    name: 'Roboto',
     weight: 100
   ),
   light: (
-    name: 'Open Sans',
+    name: 'Roboto',
     weight: 300
   ),
   base: (
-    name: 'Open Sans',
+    name: 'Roboto',
     weight: 400
   ),
   bold: (
-    name: 'Open Sans',
+    name: 'Roboto',
     weight: 700
   ),
   black: (
-    name: 'Open Sans',
+    name: 'Roboto',
     weight: 900
   )
 ) !default;
@@ -57,11 +56,12 @@ $font-fallback: Tahoma, Verdana, Segoe, sans-serif !default;
 
 /// @group    Fontes
 $font-sizes: (
-  xxxbig		:	  96px,
-  xxbig		  :	  94px,
-  xbig		  :	  72px,
-  big		    :	  32px,
-  large		  :	  24px,
+  xxxxbig		:	  64px,
+  xxxbig		:	  48px,
+  xxbig		  :	  36px,
+  xbig		  :	  32px,
+  big		    :	  24px,
+  large		  :	  18px,
   medium		:	  16px,
   normal		:	  14px,
   small		  :	  12px,

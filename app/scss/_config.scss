@@ -14,7 +14,7 @@ $colors: (
   ),
   tertiary: (
     base: #a3ca5a,
-  )
+  ),
   light: (
     base: #ffffff,
   ),
@@ -41,6 +41,10 @@ $font-config: (
   base: (
     name: 'Roboto',
     weight: 400
+  ),
+  medium: (
+    name: 'Roboto',
+    weight: 500
   ),
   bold: (
     name: 'Roboto',

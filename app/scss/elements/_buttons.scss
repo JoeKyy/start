@@ -1,6 +1,23 @@
 a,
 [type="submit"],
 button{
-	&.btn {	
+	&.btn {		
+		&.btn-secondary {
+			padding: space(p) space(base);
+
+			color: color(light);
+
+			background-color: color(secondary);
+			border: 3px solid transparent;
+			border-radius: 32px;
+
+			&:hover {
+				color: color(secondary);
+
+				background-color: transparent;
+				border: 3px solid color(secondary);
+			}
+		}
+
 	}
 }

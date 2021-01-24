@@ -1,2 +1,85 @@
 footer {
+    padding: (space(gg) * 1.5) 0 (space(gg) * 2);
+    min-height: 350px;
+
+    color: color(light);
+    font-size: font-size(large);
+
+    background-color: color(primary);
+
+    h6 {
+        &.logo {
+            @include sprite($img-logo-footer);
+            @include hidden-text();
+
+            position: relative;
+            overflow: inherit;
+
+            margin: 0 0 space(m);
+
+            font-size: 0;
+
+            a {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    p {
+        font-size: font-size(large);
+        line-height: 1.5;
+        letter-spacing: .8px;
+    }
+
+    nav {
+        padding: space(m);
+
+        ul {
+            li {
+                margin-bottom: space(base);
+            }
+        }
+
+        &.socialLinks {           
+            padding: space(m) 0;
+
+            ul {
+                display: flex;
+                li {
+                    margin-left: space(base);
+                    margin-bottom: inherit;
+
+                    &:first-child {
+                        margin-left: inherit;
+                    }
+
+                    a {
+                        display: inline-block;
+                        &[title="instagram"] {
+                            @include sprite($icn-instagram);
+                            @include hidden-text();
+                        }
+                        &[title="youtube"] {
+                            @include sprite($icn-youtube);
+                            @include hidden-text();
+                        }
+                        &[title="linkedin"] {
+                            @include sprite($icn-linkedin);
+                            @include hidden-text();
+                        }
+                        &[title="facebook"] {
+                            @include sprite($icn-facebook);
+                            @include hidden-text();
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 }

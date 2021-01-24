@@ -10,21 +10,33 @@ h5 {}
 
 h6 {}
 
-p {}
+p {
+    font-size: font-size(large);
+    line-height: 1.5;
+    letter-spacing: .8px;
+}
 
 hr {}
 
 ul {
+    font-size: font-size(large);
+    line-height: 1.5;
+    letter-spacing: .8px;
+
     li {}
 }
 
 a {
-   color: inherit;
+    font-size: font-size(large);
+    line-height: 1.5;
+    letter-spacing: .8px;
 
-   &:hover {
-        color: inherit;
-        text-decoration: underline;
-   }
+    color: inherit;
+
+    &:hover {
+            color: inherit;
+            text-decoration: underline;
+    }
 }
 
 em {

@@ -1,9 +1,13 @@
 main {
+    @include responsive(large) {
+        padding-top: 100px;
+    }
+
     position: relative;
     z-index: 1;
 
     margin-top: -100px;
-    padding-top: 100px;
+    padding-top: 85px;
 
     min-height: calc(100vh - 288px);
 }

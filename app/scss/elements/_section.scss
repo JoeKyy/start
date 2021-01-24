@@ -6,6 +6,186 @@ section {
 
         font-size: font-size(xxxbig);
     }
+
+    &.highlight {
+        position: relative;
+        z-index: 1;
+        
+        &:before {
+            @include generated-content(755px, 698px);
+            @include responsive(xlarge) {
+                transform: scale(2);
+                top: -40%;
+                right: 5%;
+            }
+
+            @include responsive(large) {
+                transform: scale(1.5);
+                top: -10%;
+                right: 8%;
+            }
+
+            @include responsive(medium, max) {                
+                transform: scale(1.2);
+                top: 0px;
+                right: -14%;
+            }
+
+            @include responsive(small, max) {                
+                transform: scale(.5);
+                top: -20vh;
+                right: -60vw;
+            }
+
+            position: absolute;
+            z-index: -1;
+            transform: scale(1.2);
+            top: 0px;
+            right: -14%;
+
+            background-image: url(../images/sprites/img-highlight-bg-01.png);
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+        &:after {
+            @include generated-content(192px, 255px);
+
+            position: absolute;
+            z-index: -1;
+            bottom: 20%;
+            right: 0;
+
+            background-image: url(../images/sprites/img-highlight-bg-02.png);
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+        h2 {
+            @include font(bold);
+            @include responsive(large) {
+                font-size: font-size(xxxxbig);
+            }
+
+            @include responsive(large, max) {
+                font-size: font-size(xxxbig);
+            }
+
+            @include responsive(small, max) {
+                font-size: font-size(big);
+            }
+
+            font-size: font-size(big);
+            color: color(primary);
+
+            &:before {
+                @include generated-content(224px, 64px);
+    
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                right: -30%;
+    
+                background-image: url(../images/sprites/img-highlight-bg-03.png);
+                background-position: top center;
+                background-repeat: no-repeat;
+            }
+
+            span {
+                color: color(secondary);
+            }
+
+            + p {
+                @include font(bold);
+                @include responsive(large) {                    
+                    margin-top: space(m);
+                    margin-left: (space(xg) * 1.8);
+
+                    font-size: font-size(xbig);
+                }
+
+                margin-top: space(base);
+
+                font-size: font-size(medium);
+                line-height: 1;
+
+                span {
+                    color: color(secondary);
+                }
+            }
+        }
+
+        .btn {
+            @include font(bold);
+            @include responsive(large) {
+                margin-top: inherit;
+                padding: space(p) space(m);
+
+                font-size: font-size(big);
+            }
+
+            margin-top: space(m);
+        }
+    }
+
+    &.about,
+    &.subscription {
+        margin-top: -10px; 
+
+        background: color(primary);
+        background: linear-gradient(90deg, color(primary, darker) 0%, color(primary) 100%);
+    }
+
+    &.about {
+        @include responsive(large) {
+            margin-top: (space(xg) * 2);
+            padding: (space(xg) * 2) 0 0;
+        }
+        
+        h3 {
+            &.logo {
+                @include sprite($img-logo);
+                @include hidden-text();
+
+                display: inline-block;
+            }
+        }
+    }
+
+    &.subscription {
+        padding-bottom: (space(xg) * 2);
+
+        .subscription--content {
+            position: relative;
+            
+            &:before {
+                @include generated-content(407px, 407px);
+    
+                position: absolute;
+                z-index: 0;
+                bottom: 0;
+                left: -200px;
+    
+                background-image: url(../images/sprites/img-about-bg-01.png);
+                background-position: top center;
+                background-repeat: no-repeat;
+            }
+
+            &:after {
+                @include generated-content(508px, 508px);
+    
+                position: absolute;
+                z-index: 0;
+                bottom: -300px;
+                right: -400px;
+    
+                background-image: url(../images/sprites/img-about-bg-02.png);
+                background-position: top center;
+                background-repeat: no-repeat;
+            }
+        }
+
+    }
     
     &.aboutUs {
         h3 {

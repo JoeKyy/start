@@ -50,9 +50,6 @@ header {
             }
 
             display: none;
-            
-
-            background-color: color(light);
 
             &.nav-menu {
                 &--open {
@@ -65,7 +62,7 @@ header {
                     width: 100%;
                     height: 100vh;
             
-                    background-color: color(light, lighter);
+                    background-color: color(light);
 
                     ul {
                         display: block;

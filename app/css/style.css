@@ -76,7 +76,7 @@ td {
     TYPOGRAPHY
 \*------------------------------------*/
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5;
   letter-spacing: .8px; }
 
@@ -172,7 +172,7 @@ button.btn.btn-secondary {
   a.btn.btn-secondary:hover,
   [type="submit"].btn.btn-secondary:hover,
   button.btn.btn-secondary:hover {
-    color: #ed731f;
+    color: #ffffff;
     background-color: transparent;
     border: 3px solid #ed731f; }
 
@@ -214,8 +214,7 @@ header {
   header .menu {
     float: right; }
     header .menu nav {
-      display: none;
-      background-color: #ffffff; }
+      display: none; }
       @media (min-width: 75em) {
         header .menu nav {
           display: inline-flex;
@@ -227,7 +226,8 @@ header {
         z-index: 99998;
         display: inherit;
         width: 100%;
-        height: 100vh; }
+        height: 100vh;
+        background-color: #ffffff; }
         header .menu nav.nav-menu--open ul {
           display: block;
           margin: 56px 24px; }
@@ -306,7 +306,7 @@ html {
   @media (min-width: 75em) {
     html {
       -webkit-overflow-scrolling: inherit;
-      overflow-x: inherit; } }
+      overflow-x: hidden; } }
 
 body {
   font-family: "Roboto";
@@ -326,8 +326,11 @@ main {
   position: relative;
   z-index: 1;
   margin-top: -100px;
-  padding-top: 100px;
+  padding-top: 85px;
   min-height: calc(100vh - 288px); }
+  @media (min-width: 75em) {
+    main {
+      padding-top: 100px; } }
 
 /*------------------------------------*\
     SECTION
@@ -338,6 +341,148 @@ section {
     font-family: "Roboto";
     font-weight: 700;
     font-size: 3rem; }
+  section.highlight {
+    position: relative;
+    z-index: 1; }
+    section.highlight:before {
+      display: inline-block;
+      width: 755px;
+      height: 698px;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      transform: scale(1.2);
+      top: 0px;
+      right: -14%;
+      background-image: url(../images/sprites/img-highlight-bg-01.png);
+      background-position: top center;
+      background-repeat: no-repeat; }
+      @media (min-width: 82.5625em) {
+        section.highlight:before {
+          transform: scale(2);
+          top: -40%;
+          right: 5%; } }
+      @media (min-width: 75em) {
+        section.highlight:before {
+          transform: scale(1.5);
+          top: -10%;
+          right: 8%; } }
+      @media (max-width: 48em) {
+        section.highlight:before {
+          transform: scale(1.2);
+          top: 0px;
+          right: -14%; } }
+      @media (max-width: 40em) {
+        section.highlight:before {
+          transform: scale(0.5);
+          top: -20vh;
+          right: -60vw; } }
+    section.highlight:after {
+      display: inline-block;
+      width: 192px;
+      height: 255px;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 20%;
+      right: 0;
+      background-image: url(../images/sprites/img-highlight-bg-02.png);
+      background-position: top center;
+      background-repeat: no-repeat; }
+    section.highlight h2 {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #046198; }
+      @media (min-width: 75em) {
+        section.highlight h2 {
+          font-size: 4rem; } }
+      @media (max-width: 74.9375em) {
+        section.highlight h2 {
+          font-size: 3rem; } }
+      @media (max-width: 40em) {
+        section.highlight h2 {
+          font-size: 1.5rem; } }
+      section.highlight h2:before {
+        display: inline-block;
+        width: 224px;
+        height: 64px;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: -30%;
+        background-image: url(../images/sprites/img-highlight-bg-03.png);
+        background-position: top center;
+        background-repeat: no-repeat; }
+      section.highlight h2 span {
+        color: #ed731f; }
+      section.highlight h2 + p {
+        font-family: "Roboto";
+        font-weight: 700;
+        margin-top: 16px;
+        font-size: 1rem;
+        line-height: 1; }
+        @media (min-width: 75em) {
+          section.highlight h2 + p {
+            margin-top: 24px;
+            margin-left: 100.8px;
+            font-size: 2rem; } }
+        section.highlight h2 + p span {
+          color: #ed731f; }
+    section.highlight .btn {
+      font-family: "Roboto";
+      font-weight: 700;
+      margin-top: 24px; }
+      @media (min-width: 75em) {
+        section.highlight .btn {
+          margin-top: inherit;
+          padding: 8px 24px;
+          font-size: 1.5rem; } }
+  section.about, section.subscription {
+    margin-top: -10px;
+    background: #046198;
+    background: linear-gradient(90deg, #2ca1df 0%, #046198 100%); }
+  @media (min-width: 75em) {
+    section.about {
+      margin-top: 112px;
+      padding: 112px 0 0; } }
+  section.about h3.logo {
+    background-image: url("../images/sprite.png");
+    background-position: -986px -892px;
+    width: 192px;
+    height: 35px;
+    overflow: hidden;
+    text-indent: -9999px;
+    display: inline-block; }
+  section.subscription {
+    padding-bottom: 112px; }
+    section.subscription .subscription--content {
+      position: relative; }
+      section.subscription .subscription--content:before {
+        display: inline-block;
+        width: 407px;
+        height: 407px;
+        content: '';
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        left: -200px;
+        background-image: url(../images/sprites/img-about-bg-01.png);
+        background-position: top center;
+        background-repeat: no-repeat; }
+      section.subscription .subscription--content:after {
+        display: inline-block;
+        width: 508px;
+        height: 508px;
+        content: '';
+        position: absolute;
+        z-index: 0;
+        bottom: -300px;
+        right: -400px;
+        background-image: url(../images/sprites/img-about-bg-02.png);
+        background-position: top center;
+        background-repeat: no-repeat; }
   section.aboutUs h3 {
     color: #046198; }
   section.aboutUs p {

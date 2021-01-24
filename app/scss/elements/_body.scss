@@ -2,7 +2,7 @@ html {
     @include font(base, $fallback: true);
     @include responsive(large) {
         -webkit-overflow-scrolling: inherit;
-        overflow-x: inherit;
+        overflow-x: hidden;
     }
 
     width: 100%;

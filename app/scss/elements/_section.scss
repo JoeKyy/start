@@ -1,2 +1,68 @@
 section {
+    padding: space(xg) 0;
+
+    h3 {
+        @include font(bold);
+
+        font-size: font-size(xxxbig);
+    }
+    
+    &.aboutUs {
+        h3 {
+            color: color(primary);
+        }
+
+        p {
+            font-size: font-size(medium);
+        }
+
+        ul {
+            @include responsive(large) {
+                display: flex;
+                align-items: flex-end;
+            }
+
+            li {
+                @include font(bold);
+
+                margin: 0 space(p);
+                flex-direction: column;
+
+                text-align: center;
+
+                &:before {
+                    @include sprite($icn-about_us-01);
+                    @include hidden-text();
+
+                    display: block;
+                    margin: 0 auto;
+                    content: '';
+                }
+
+                + li {
+                    &:before {
+                        @include sprite($icn-about_us-02);
+                    }
+
+                    + li {
+                        &:before {
+                            @include sprite($icn-about_us-03);
+                        }
+
+                        + li {
+                            &:before {
+                                @include sprite($icn-about_us-04);
+                            }
+
+                            + li {
+                                &:before {
+                                    @include sprite($icn-about_us-05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

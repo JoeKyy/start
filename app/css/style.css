@@ -99,7 +99,64 @@ em {
 
 strong {
   font-family: "Roboto";
-  font-weight: 900; }
+  font-weight: 700; }
+
+.text-color-primary-darker {
+  color: #2ca1df; }
+
+.text-color-primary-base {
+  color: #046198; }
+
+.text-color-primary-lighter {
+  color: #0098D6; }
+
+.text-color-secondary {
+  color: #ed731f; }
+
+.text-color-tertiary {
+  color: #a3ca5a; }
+
+.text-color-light {
+  color: #ffffff; }
+
+.text-color-dark {
+  color: #1a3240; }
+
+.text-color-danger {
+  color: #f85757; }
+
+.text-color-success {
+  color: #00b412; }
+
+.text-color-warning {
+  color: #fed82b; }
+
+.text-size-xxxxbig {
+  font-size: 4rem !important; }
+
+.text-size-xxxbig {
+  font-size: 3rem !important; }
+
+.text-size-xxbig {
+  font-size: 2.25rem !important; }
+
+.text-size-xbig {
+  font-size: 2rem !important; }
+
+.text-size-big {
+  font-size: 1.5rem !important; }
+
+.text-size-large {
+  font-size: 1.125rem !important; }
+
+.text-size-medium {
+  font-size: 1rem !important; }
+
+.text-size-normal {
+  font-size: 0.875rem !important; }
+
+.text-size-small {
+  font-size: 0.75rem !important; }
 
 /*------------------------------------*\
     FORM
@@ -275,6 +332,57 @@ main {
 /*------------------------------------*\
     SECTION
 \*------------------------------------*/
+section {
+  padding: 56px 0; }
+  section h3 {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 3rem; }
+  section.aboutUs h3 {
+    color: #046198; }
+  section.aboutUs p {
+    font-size: 1rem; }
+  @media (min-width: 75em) {
+    section.aboutUs ul {
+      display: flex;
+      align-items: flex-end; } }
+  section.aboutUs ul li {
+    font-family: "Roboto";
+    font-weight: 700;
+    margin: 0 8px;
+    flex-direction: column;
+    text-align: center; }
+    section.aboutUs ul li:before {
+      background-image: url("../images/sprite.png");
+      background-position: -1116px -698px;
+      width: 127px;
+      height: 125px;
+      overflow: hidden;
+      text-indent: -9999px;
+      display: block;
+      margin: 0 auto;
+      content: ''; }
+    section.aboutUs ul li + li:before {
+      background-image: url("../images/sprite.png");
+      background-position: -1025px -953px;
+      width: 112px;
+      height: 114px; }
+    section.aboutUs ul li + li + li:before {
+      background-image: url("../images/sprite.png");
+      background-position: -910px -953px;
+      width: 115px;
+      height: 117px; }
+    section.aboutUs ul li + li + li + li:before {
+      background-image: url("../images/sprite.png");
+      background-position: -794px -953px;
+      width: 116px;
+      height: 117px; }
+    section.aboutUs ul li + li + li + li + li:before {
+      background-image: url("../images/sprite.png");
+      background-position: -986px -698px;
+      width: 130px;
+      height: 130px; }
+
 /*------------------------------------*\
     FOOTER
 \*------------------------------------*/

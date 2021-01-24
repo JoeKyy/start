@@ -44,5 +44,80 @@ em {
 }
 
 strong {
-    @include font(black);
+    @include font(bold);
+}
+
+
+.text-color-primary-darker {
+    color: color(primary, darker),
+}
+
+.text-color-primary-base {
+    color: color(primary, base),
+}
+
+.text-color-primary-lighter {
+    color: color(primary, lighter),
+}
+
+.text-color-secondary {
+    color: color(secondary);
+}
+
+.text-color-tertiary {
+    color: color(tertiary);
+}
+
+.text-color-light {
+    color: color(light);
+}
+
+.text-color-dark {
+    color: color(dark);
+}
+
+.text-color-danger {
+    color: color(danger);
+}
+.text-color-success {
+    color: color(success);
+}
+.text-color-warning {
+    color: color(warning);
+}
+
+.text-size-xxxxbig {
+    font-size: font-size(xxxxbig) !important;
+}
+
+.text-size-xxxbig {
+    font-size: font-size(xxxbig) !important;
+}
+
+.text-size-xxbig {
+    font-size: font-size(xxbig) !important;
+}
+
+.text-size-xbig {
+    font-size: font-size(xbig) !important;
+}
+
+.text-size-big {
+    font-size: font-size(big) !important;
+}
+
+.text-size-large {
+    font-size: font-size(large) !important;
+}
+
+.text-size-medium {
+    font-size: font-size(medium) !important;
+}
+
+.text-size-normal {
+    font-size: font-size(normal) !important;
+}
+
+.text-size-small {
+    font-size: font-size(small) !important;
 }

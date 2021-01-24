@@ -37,7 +37,11 @@ footer {
     }
 
     nav {
-        padding: space(m);
+        @include responsive(large) {
+            padding: space(m);
+        }
+        
+        padding: space(m) 0;
 
         ul {
             li {

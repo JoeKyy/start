@@ -1,19 +1,30 @@
 header {
+    @include responsive(large) {
+        margin-top: space(gg);
+    }
+
     position: absolute;
     top: 0;
     left: 0;
     z-index: 3;
 
     width: 100%;
-    margin-top: space(gg);
+    margin-top: space(g);
 
     h1 {
         &.logo {
             @include sprite($img-logo-top);
             @include hidden-text();
+            @include responsive(large) {
+                margin: inherit;
+                transform: scale(1);
+            }
 
             position: relative;
             overflow: inherit;
+            transform: scale(.6);
+
+            margin: 0 -55px;
 
             font-size: 0;
 
@@ -58,7 +69,7 @@ header {
 
                     ul {
                         display: block;
-                        margin: space(xg);
+                        margin: space(xg) space(m);
 
                         li {
                             margin-bottom: space(m);
@@ -117,8 +128,12 @@ header {
                     }
 
                     a {
+                        @include responsive(large) {
+                            color: color(light);
+                        }
+
                         font-size: font-size(large);
-                        color: color(light);
+                        color: color(dark);
 
                         &:hover {
                             text-decoration: none;

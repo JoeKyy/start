@@ -183,6 +183,98 @@ section {
     
         }
     }
+
+    &.information {
+        .box {
+            margin: space(p);
+            padding: space(g) space(m) space(gg);
+            
+            border-radius: 24px;
+            box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.1);
+            background-color: color(light);
+        }
+
+        h4 {
+            @include font(bold);
+            display: flex;
+            align-items: center;
+
+            &:before {
+                display: inline-block;
+                margin-right: space(p);
+                content: "";
+            }
+
+            &.etapas {
+                &:before {
+                    @include sprite($icn-opportunities-01);
+                }
+            }
+
+
+            &.preRequisitos {
+                &:before {
+                    @include sprite($icn-opportunities-02);
+                }
+            }
+
+            &.localidades {
+                &:before {
+                    @include sprite($icn-opportunities-03);
+                }
+            }
+
+            &.benefícios {
+                &:before {
+                    @include sprite($icn-opportunities-04);
+                }
+            }
+        }
+
+        ul {
+            li {
+                position: relative;
+
+                margin-top: space(m);
+                padding-left: space(gg);
+                
+                &:before {
+                    @include generated-content(20px, 20px);
+
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+
+                    border-radius: 50%;
+                    background-color: color(secondary);
+                }
+
+                &:after {
+                    @include generated-content(1px, 95%);
+
+                    position: absolute;
+                    top: 28px;
+                    left: 9px;
+
+                    background-color: color(secondary);
+                }
+
+                &:last-child {
+                    margin-top: 0;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                p {
+                    strong {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
     
     &.aboutUs {
         h3 {

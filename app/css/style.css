@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables */
 /*------------------------------------*\
     VENDORS
@@ -483,6 +484,70 @@ section {
           background-image: url(../images/sprites/img-about-bg-02.png);
           background-position: top center;
           background-repeat: no-repeat; }
+  section.information .box {
+    margin: 8px;
+    padding: 32px 24px 48px;
+    border-radius: 24px;
+    box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; }
+  section.information h4 {
+    font-family: "Roboto";
+    font-weight: 700;
+    display: flex;
+    align-items: center; }
+    section.information h4:before {
+      display: inline-block;
+      margin-right: 8px;
+      content: ""; }
+    section.information h4.etapas:before {
+      background-image: url("../images/sprite.png");
+      background-position: -1172px -508px;
+      width: 56px;
+      height: 56px; }
+    section.information h4.preRequisitos:before {
+      background-image: url("../images/sprite.png");
+      background-position: -1172px -564px;
+      width: 56px;
+      height: 56px; }
+    section.information h4.localidades:before {
+      background-image: url("../images/sprite.png");
+      background-position: -1137px -953px;
+      width: 56px;
+      height: 56px; }
+    section.information h4.benefícios:before {
+      background-image: url("../images/sprite.png");
+      background-position: -1193px -953px;
+      width: 56px;
+      height: 56px; }
+  section.information ul li {
+    position: relative;
+    margin-top: 24px;
+    padding-left: 48px; }
+    section.information ul li:before {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      border-radius: 50%;
+      background-color: #ed731f; }
+    section.information ul li:after {
+      display: inline-block;
+      width: 1px;
+      height: 95%;
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 9px;
+      background-color: #ed731f; }
+    section.information ul li:last-child {
+      margin-top: 0; }
+      section.information ul li:last-child:after {
+        display: none; }
+    section.information ul li p strong {
+      display: block; }
   section.aboutUs h3 {
     color: #046198; }
   section.aboutUs p {

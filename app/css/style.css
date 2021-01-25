@@ -358,26 +358,31 @@ section {
       background-image: url(../images/sprites/img-highlight-bg-01.png);
       background-position: top center;
       background-repeat: no-repeat; }
-      @media (min-width: 82.5625em) {
+      @media (max-width: 120em) {
         section.highlight:before {
           transform: scale(2);
           top: -40%;
           right: 5%; } }
-      @media (min-width: 75em) {
+      @media (max-width: 90em) {
         section.highlight:before {
           transform: scale(1.5);
           top: -10%;
-          right: 8%; } }
+          right: -6%; } }
+      @media (max-width: 74.9375em) {
+        section.highlight:before {
+          transform: scale(1);
+          top: 0px;
+          right: -17%; } }
       @media (max-width: 48em) {
         section.highlight:before {
-          transform: scale(1.2);
+          transform: scale(1);
           top: 0px;
-          right: -14%; } }
+          right: -40%; } }
       @media (max-width: 40em) {
         section.highlight:before {
           transform: scale(0.5);
           top: -20vh;
-          right: -60vw; } }
+          right: -90vw; } }
     section.highlight:after {
       display: inline-block;
       width: 192px;
@@ -574,50 +579,52 @@ section {
         display: none; }
     section.information ul li p strong {
       display: block; }
-  section.aboutUs h3 {
-    color: #046198; }
-  section.aboutUs p {
-    font-size: 1rem; }
-  @media (min-width: 75em) {
-    section.aboutUs ul {
-      display: flex;
-      align-items: flex-end; } }
-  section.aboutUs ul li {
-    font-family: "Roboto";
-    font-weight: 700;
-    margin: 0 8px;
-    flex-direction: column;
-    text-align: center; }
-    section.aboutUs ul li:before {
-      background-image: url("../images/sprite.png");
-      background-position: -1116px -698px;
-      width: 127px;
-      height: 125px;
-      overflow: hidden;
-      text-indent: -9999px;
-      display: block;
-      margin: 0 auto;
-      content: ''; }
-    section.aboutUs ul li + li:before {
-      background-image: url("../images/sprite.png");
-      background-position: -1025px -953px;
-      width: 112px;
-      height: 114px; }
-    section.aboutUs ul li + li + li:before {
-      background-image: url("../images/sprite.png");
-      background-position: -910px -953px;
-      width: 115px;
-      height: 117px; }
-    section.aboutUs ul li + li + li + li:before {
-      background-image: url("../images/sprite.png");
-      background-position: -794px -953px;
-      width: 116px;
-      height: 117px; }
-    section.aboutUs ul li + li + li + li + li:before {
-      background-image: url("../images/sprite.png");
-      background-position: -986px -698px;
-      width: 130px;
-      height: 130px; }
+  section.aboutUs {
+    padding-top: 0; }
+    section.aboutUs h3 {
+      color: #046198; }
+    section.aboutUs p {
+      font-size: 1rem; }
+    @media (min-width: 75em) {
+      section.aboutUs ul {
+        display: flex;
+        align-items: flex-end; } }
+    section.aboutUs ul li {
+      font-family: "Roboto";
+      font-weight: 700;
+      margin: 0 8px;
+      flex-direction: column;
+      text-align: center; }
+      section.aboutUs ul li:before {
+        background-image: url("../images/sprite.png");
+        background-position: -1116px -698px;
+        width: 127px;
+        height: 125px;
+        overflow: hidden;
+        text-indent: -9999px;
+        display: block;
+        margin: 0 auto;
+        content: ''; }
+      section.aboutUs ul li + li:before {
+        background-image: url("../images/sprite.png");
+        background-position: -1025px -953px;
+        width: 112px;
+        height: 114px; }
+      section.aboutUs ul li + li + li:before {
+        background-image: url("../images/sprite.png");
+        background-position: -910px -953px;
+        width: 115px;
+        height: 117px; }
+      section.aboutUs ul li + li + li + li:before {
+        background-image: url("../images/sprite.png");
+        background-position: -794px -953px;
+        width: 116px;
+        height: 117px; }
+      section.aboutUs ul li + li + li + li + li:before {
+        background-image: url("../images/sprite.png");
+        background-position: -986px -698px;
+        width: 130px;
+        height: 130px; }
 
 /*------------------------------------*\
     FOOTER

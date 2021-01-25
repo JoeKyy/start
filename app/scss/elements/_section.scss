@@ -13,28 +13,36 @@ section {
         
         &:before {
             @include generated-content(755px, 698px);
-            @include responsive(xlarge) {
+            
+            
+            @include responsive(xxlarge, max) {
                 transform: scale(2);
                 top: -40%;
                 right: 5%;
             }
-
-            @include responsive(large) {
+            
+            @include responsive(xlarge, max) {
                 transform: scale(1.5);
                 top: -10%;
-                right: 8%;
+                right: -6%;
+            }
+
+            @include responsive(large, max) {                
+                transform: scale(1);
+                top: 0px;
+                right: -17%;
             }
 
             @include responsive(medium, max) {                
-                transform: scale(1.2);
+                transform: scale(1);
                 top: 0px;
-                right: -14%;
+                right: -40%;
             }
 
             @include responsive(small, max) {                
                 transform: scale(.5);
                 top: -20vh;
-                right: -60vw;
+                right: -90vw;
             }
 
             position: absolute;
@@ -313,6 +321,8 @@ section {
     }
     
     &.aboutUs {
+        padding-top: 0;
+
         h3 {
             color: color(primary);
         }

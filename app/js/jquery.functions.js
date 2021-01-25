@@ -35,4 +35,10 @@ $(function () {
 			$('.menu nav').addClass('nav-menu--close');
 		}
 	});
+
+	$('header .menu nav ul li a').click(function(){
+		$('.nav-button').removeClass('is-active');
+		$('.menu nav').removeClass('nav-menu--open');
+		$('.menu nav').addClass('nav-menu--close');
+	});
 });

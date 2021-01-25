@@ -372,7 +372,7 @@ section {
         section.highlight:before {
           transform: scale(1.5);
           top: -10%;
-          right: -10%; } }
+          right: -12%; } }
       @media (max-width: 79.875em) {
         section.highlight:before {
           transform: scale(1);
@@ -460,9 +460,9 @@ section {
         padding: 112px 0 0; } }
     section.about h3.logo {
       background-image: url("../images/sprite.png");
-      background-position: -986px -892px;
-      width: 192px;
-      height: 35px;
+      background-position: -755px -645px;
+      width: 279px;
+      height: 51px;
       overflow: hidden;
       text-indent: -9999px;
       display: inline-block; }

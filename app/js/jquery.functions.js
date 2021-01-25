@@ -1,10 +1,10 @@
 $(function () {
-	$('.highlight--content').slick({
+	$('.opportunities--slide').slick({
 		dots: false,
 		arrows: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 1,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		responsive: [
 			{

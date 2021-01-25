@@ -149,7 +149,7 @@ section {
         }
         
         .subscription {
-            padding: (space(xg) * 2) 0 (space(xg) * 6);
+            padding: (space(xg) * 2) 0 (space(xg) * 8);
     
             .subscription--content {
                 position: relative;
@@ -181,6 +181,42 @@ section {
                 }
             }
     
+        }
+    }
+
+    &.opportunities {
+        margin-top: -400px;
+
+        .container {
+            position: relative;
+
+            &:before {
+                @include generated-content(387px, 432px);
+    
+                position: absolute;
+                z-index: 0;
+                bottom: -170px;
+                right: -150px;
+    
+                background-image: url(../images/sprites/img-opportunities-bg-01.png);
+                background-position: top center;
+                background-repeat: no-repeat;
+            }
+        }
+
+
+        .box {
+            margin: space(p);
+            padding: space(g) space(g) space(gg);
+            min-height: 565px;
+
+            border-radius: 24px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+            background-color: var(--white);
+
+            h4 {
+                @include font(bold);
+            }
         }
     }
 

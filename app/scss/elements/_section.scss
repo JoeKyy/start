@@ -128,19 +128,16 @@ section {
         }
     }
 
-    &.about,
-    &.subscription {
-        margin-top: -10px; 
-
-        background: color(primary);
-        background: linear-gradient(90deg, color(primary, darker) 0%, color(primary) 100%);
-    }
-
     &.about {
         @include responsive(large) {
             margin-top: (space(xg) * 2);
             padding: (space(xg) * 2) 0 0;
         }
+
+        margin-top: -10px; 
+
+        background: color(primary);
+        background: linear-gradient(180deg, color(primary, darker) 0%, color(primary) 100%);
         
         h3 {
             &.logo {
@@ -150,41 +147,41 @@ section {
                 display: inline-block;
             }
         }
-    }
-
-    &.subscription {
-        padding-bottom: (space(xg) * 2);
-
-        .subscription--content {
-            position: relative;
-            
-            &:before {
-                @include generated-content(407px, 407px);
+        
+        .subscription {
+            padding: (space(xg) * 2) 0 (space(xg) * 6);
     
-                position: absolute;
-                z-index: 0;
-                bottom: 0;
-                left: -200px;
+            .subscription--content {
+                position: relative;
+                
+                &:before {
+                    @include generated-content(407px, 407px);
+        
+                    position: absolute;
+                    z-index: 0;
+                    bottom: 0;
+                    left: -200px;
+        
+                    background-image: url(../images/sprites/img-about-bg-01.png);
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                }
     
-                background-image: url(../images/sprites/img-about-bg-01.png);
-                background-position: top center;
-                background-repeat: no-repeat;
+                &:after {
+                    @include generated-content(508px, 508px);
+        
+                    position: absolute;
+                    z-index: 0;
+                    bottom: -300px;
+                    right: -400px;
+        
+                    background-image: url(../images/sprites/img-about-bg-02.png);
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                }
             }
-
-            &:after {
-                @include generated-content(508px, 508px);
     
-                position: absolute;
-                z-index: 0;
-                bottom: -300px;
-                right: -400px;
-    
-                background-image: url(../images/sprites/img-about-bg-02.png);
-                background-position: top center;
-                background-repeat: no-repeat;
-            }
         }
-
     }
     
     &.aboutUs {

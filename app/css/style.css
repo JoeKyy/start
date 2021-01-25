@@ -439,50 +439,50 @@ section {
           margin-top: inherit;
           padding: 8px 24px;
           font-size: 1.5rem; } }
-  section.about, section.subscription {
+  section.about {
     margin-top: -10px;
     background: #046198;
-    background: linear-gradient(90deg, #2ca1df 0%, #046198 100%); }
-  @media (min-width: 75em) {
-    section.about {
-      margin-top: 112px;
-      padding: 112px 0 0; } }
-  section.about h3.logo {
-    background-image: url("../images/sprite.png");
-    background-position: -986px -892px;
-    width: 192px;
-    height: 35px;
-    overflow: hidden;
-    text-indent: -9999px;
-    display: inline-block; }
-  section.subscription {
-    padding-bottom: 112px; }
-    section.subscription .subscription--content {
-      position: relative; }
-      section.subscription .subscription--content:before {
-        display: inline-block;
-        width: 407px;
-        height: 407px;
-        content: '';
-        position: absolute;
-        z-index: 0;
-        bottom: 0;
-        left: -200px;
-        background-image: url(../images/sprites/img-about-bg-01.png);
-        background-position: top center;
-        background-repeat: no-repeat; }
-      section.subscription .subscription--content:after {
-        display: inline-block;
-        width: 508px;
-        height: 508px;
-        content: '';
-        position: absolute;
-        z-index: 0;
-        bottom: -300px;
-        right: -400px;
-        background-image: url(../images/sprites/img-about-bg-02.png);
-        background-position: top center;
-        background-repeat: no-repeat; }
+    background: linear-gradient(180deg, #2ca1df 0%, #046198 100%); }
+    @media (min-width: 75em) {
+      section.about {
+        margin-top: 112px;
+        padding: 112px 0 0; } }
+    section.about h3.logo {
+      background-image: url("../images/sprite.png");
+      background-position: -986px -892px;
+      width: 192px;
+      height: 35px;
+      overflow: hidden;
+      text-indent: -9999px;
+      display: inline-block; }
+    section.about .subscription {
+      padding: 112px 0 336px; }
+      section.about .subscription .subscription--content {
+        position: relative; }
+        section.about .subscription .subscription--content:before {
+          display: inline-block;
+          width: 407px;
+          height: 407px;
+          content: '';
+          position: absolute;
+          z-index: 0;
+          bottom: 0;
+          left: -200px;
+          background-image: url(../images/sprites/img-about-bg-01.png);
+          background-position: top center;
+          background-repeat: no-repeat; }
+        section.about .subscription .subscription--content:after {
+          display: inline-block;
+          width: 508px;
+          height: 508px;
+          content: '';
+          position: absolute;
+          z-index: 0;
+          bottom: -300px;
+          right: -400px;
+          background-image: url(../images/sprites/img-about-bg-02.png);
+          background-position: top center;
+          background-repeat: no-repeat; }
   section.aboutUs h3 {
     color: #046198; }
   section.aboutUs p {

@@ -14,17 +14,22 @@ section {
         &:before {
             @include generated-content(755px, 698px);
             
-            
-            @include responsive(xxlarge, max) {
+            @include responsive(xxxlarge, max) {
                 transform: scale(2);
                 top: -40%;
                 right: 5%;
             }
             
+            @include responsive(xxlarge, max) {
+                transform: scale(2);
+                top: -40%;
+                right: -11%;
+            }
+            
             @include responsive(xlarge, max) {
                 transform: scale(1.5);
                 top: -10%;
-                right: -6%;
+                right: -10%;
             }
 
             @include responsive(large, max) {                
@@ -193,7 +198,7 @@ section {
     }
 
     &.opportunities {
-        margin-top: -400px;
+        margin-top: -300px;
 
         .container {
             position: relative;
@@ -229,6 +234,9 @@ section {
     }
 
     &.information {
+        margin-top: -100px;
+        padding-top: 0;
+
         .box {
             margin: space(p);
             padding: space(g) space(m) space(gg);

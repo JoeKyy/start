@@ -1,324 +1,249 @@
 section {
     padding: space(xg) 0;
-
     h3 {
         @include font(bold);
-
         font-size: font-size(xxxbig);
     }
-
     &.highlight {
         position: relative;
         z-index: 1;
-        
         &:before {
             @include generated-content(755px, 698px);
-            
             @include responsive(xxxlarge, max) {
                 transform: scale(2);
                 top: -40%;
                 right: 5%;
             }
-            
             @include responsive(xxlarge, max) {
                 transform: scale(2);
                 top: -40%;
                 right: -11%;
             }
-            
             @include responsive(xlarge, max) {
                 transform: scale(1.5);
                 top: -10%;
                 right: -12%;
             }
-
-            @include responsive(large, max) {                
+            @include responsive(large, max) {
                 transform: scale(1);
                 top: 0px;
                 right: -17%;
             }
-
-            @include responsive(medium, max) {                
+            @include responsive(medium, max) {
                 transform: scale(1);
                 top: 0px;
                 right: -40%;
             }
-
-            @include responsive(small, max) {                
+            @include responsive(small, max) {
                 transform: scale(.5);
                 top: -20vh;
                 right: -90vw;
             }
-
             position: absolute;
             z-index: -1;
             transform: scale(1.2);
             top: 0px;
             right: -14%;
-
             background-image: url(../images/sprites/img-highlight-bg-01.png);
             background-position: top center;
             background-repeat: no-repeat;
         }
-
         &:after {
             @include generated-content(192px, 255px);
-
             position: absolute;
             z-index: -1;
             bottom: 20%;
             right: 0;
-
             background-image: url(../images/sprites/img-highlight-bg-02.png);
             background-position: top center;
             background-repeat: no-repeat;
         }
-
         h2 {
             @include font(bold);
             @include responsive(large) {
                 font-size: font-size(xxxxbig);
             }
-
             @include responsive(large, max) {
                 font-size: font-size(xxxbig);
             }
-
             @include responsive(small, max) {
                 font-size: font-size(big);
             }
-
             font-size: font-size(big);
             color: color(primary);
-
             &:before {
                 @include generated-content(224px, 64px);
-    
                 position: absolute;
                 z-index: -1;
                 top: 0;
                 right: -30%;
-    
                 background-image: url(../images/sprites/img-highlight-bg-03.png);
                 background-position: top center;
                 background-repeat: no-repeat;
             }
-
             span {
                 color: color(secondary);
             }
-
-            + p {
+            +p {
                 @include font(bold);
-                @include responsive(large) {                    
+                @include responsive(large) {
                     margin-top: space(m);
                     margin-left: (space(xg) * 1.8);
-
                     font-size: font-size(xbig);
                 }
-
                 margin-top: space(base);
-
                 font-size: font-size(medium);
                 line-height: 1;
-
                 span {
                     color: color(secondary);
                 }
             }
         }
-
         .btn {
             @include font(bold);
             @include responsive(large) {
                 margin-top: inherit;
                 padding: space(p) space(m);
-
                 font-size: font-size(big);
             }
-
             margin-top: space(m);
         }
     }
-
     &.about {
         @include responsive(large) {
             margin-top: (space(xg) * 2);
             padding: (space(xg) * 2) 0 0;
         }
-
-        margin-top: -10px; 
-
+        margin-top: -10px;
         background: color(primary);
         background: linear-gradient(180deg, color(primary, darker) 0%, color(primary) 100%);
-        
         h3 {
             &.logo {
                 @include sprite($img-logo-top);
                 @include hidden-text();
-
                 display: inline-block;
             }
         }
-        
         .subscription {
             padding: (space(xg) * 2) 0 (space(xg) * 8);
-    
             .subscription--content {
                 position: relative;
-                
                 &:before {
                     @include generated-content(407px, 407px);
-        
                     position: absolute;
                     z-index: 0;
                     bottom: 0;
                     left: -200px;
-        
                     background-image: url(../images/sprites/img-about-bg-01.png);
                     background-position: top center;
                     background-repeat: no-repeat;
                 }
-    
                 &:after {
                     @include generated-content(508px, 508px);
-        
                     position: absolute;
                     z-index: 0;
                     bottom: -300px;
                     right: -400px;
-        
                     background-image: url(../images/sprites/img-about-bg-02.png);
                     background-position: top center;
                     background-repeat: no-repeat;
                 }
             }
-    
         }
     }
-
     &.opportunities {
-        margin-top: -300px;
-
+        margin-top: -400px;
         .container {
             position: relative;
-
             &:before {
                 @include generated-content(387px, 432px);
-    
                 position: absolute;
                 z-index: 0;
                 bottom: -170px;
                 right: -150px;
-    
                 background-image: url(../images/sprites/img-opportunities-bg-01.png);
                 background-position: top center;
                 background-repeat: no-repeat;
             }
         }
-
-
         .box {
             margin: space(p);
             padding: space(g) space(g) space(gg);
             min-height: 565px;
-
             border-radius: 24px;
             box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
             background-color: var(--white);
-
             h4 {
                 @include font(bold);
             }
         }
     }
-
     &.information {
         margin-top: -100px;
         padding-top: 0;
-
         .box {
             margin: space(p);
             padding: space(g) space(m) space(gg);
-            
             border-radius: 24px;
             box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.1);
             background-color: color(light);
         }
-
         h4 {
             @include font(bold);
             display: flex;
             align-items: center;
-
             &:before {
                 display: inline-block;
                 margin-right: space(p);
                 content: "";
             }
-
             &.etapas {
                 &:before {
                     @include sprite($icn-opportunities-01);
                 }
             }
-
-
             &.preRequisitos {
                 &:before {
                     @include sprite($icn-opportunities-02);
                 }
             }
-
             &.localidades {
                 &:before {
                     @include sprite($icn-opportunities-03);
                 }
             }
-
             &.benefícios {
                 &:before {
                     @include sprite($icn-opportunities-04);
                 }
             }
         }
-
         ul {
             li {
                 position: relative;
-
                 margin-top: space(m);
                 padding-left: space(gg);
-                
                 &:before {
                     @include generated-content(20px, 20px);
-
                     position: absolute;
                     top: 5px;
                     left: 0;
-
                     border-radius: 50%;
                     background-color: color(secondary);
                 }
-
                 &:after {
                     @include generated-content(1px, 95%);
-
                     position: absolute;
                     top: 28px;
                     left: 9px;
-
                     background-color: color(secondary);
                 }
-
                 &:last-child {
                     margin-top: 0;
-
                     &:after {
                         display: none;
                     }
                 }
-
                 p {
                     strong {
                         display: block;
@@ -327,57 +252,44 @@ section {
             }
         }
     }
-    
     &.aboutUs {
         padding-top: 0;
-
         h3 {
             color: color(primary);
         }
-
         p {
             font-size: font-size(medium);
         }
-
         ul {
             @include responsive(large) {
                 display: flex;
                 align-items: flex-end;
             }
-
             li {
                 @include font(bold);
-
                 margin: 0 space(p);
                 flex-direction: column;
-
                 text-align: center;
-
                 &:before {
                     @include sprite($icn-about_us-01);
                     @include hidden-text();
-
                     display: block;
                     margin: 0 auto;
                     content: '';
                 }
-
-                + li {
+                +li {
                     &:before {
                         @include sprite($icn-about_us-02);
                     }
-
-                    + li {
+                    +li {
                         &:before {
                             @include sprite($icn-about_us-03);
                         }
-
-                        + li {
+                        +li {
                             &:before {
                                 @include sprite($icn-about_us-04);
                             }
-
-                            + li {
+                            +li {
                                 &:before {
                                     @include sprite($icn-about_us-05);
                                 }
